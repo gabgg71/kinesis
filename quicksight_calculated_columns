@@ -1,0 +1,9 @@
+moving_average = windowAvg
+	(
+	     sum(Close), 
+	     [Date ASC],
+	     19,
+         0
+	)   
+upper = {moving_average}+stdevOver(sum(Close))
+lower = {moving_average}-stdevOver(sum(Close))
